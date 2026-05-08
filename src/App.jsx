@@ -1,7 +1,7 @@
 import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
 import './App.css'
 import Home from './components/Home'
-import BookList from './components/BookList'
+import BookList from './components/BookList/index'
 import BookDetails from './components/BookDetails'
 import Cart from './components/Cart'
 import CheckOut from './components/CheckOut'
