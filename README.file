@@ -1,0 +1,130 @@
+# Title
+ Interactive BookStore Application
+
+## Objective
+ Build an application that allows users to browse and search for books, view book details, add books to a shopping cart, and place an order.
+
+## Tech Stack
+ Frontend - React JS (React Router, Redux or React Context API, CSS or CSS frameworks, Git, and GitHub for hosting the repository.)
+
+## Completion Instructions
+
+### Functionality
+
+## Routes
+
+|     Page     |     Route    |    Path    |
+|:------------:|:------------:|:----------:|
+|     Home     |     Home     |      /     |
+|   Book List  |   Book List  |   /books   |
+| Book Details | Book Details | /books/:id |
+|     Cart     |     Cart     |    /cart   |
+|   Checkout   |   Checkout   |  /checkout |
+|   Not Found  |   Not Found  | /not-found |
+
+### Routes & Components
+ # Home
+
+| Component |                     Details                     | State | API (IT Bookstore) |
+|:---------:|:-----------------------------------------------:|:-----:|:------------------:|
+|    Home   | Heading, Description, and "ExploreBooks" button |   -   |          -         |
+|   Header  |      links for pages Home, Book List, Cart      |   -   |          -         |
+    
+## Book List
+
+Component	         Details	                        State	                        API (IT Bookstore)
+BookList		                                apiStatus, booksData,
+                                                priceRangeValue	                        /new
+Header	       links for pages Home,
+                 Book List, Cart	                     -	                              -
+SearchInput	   Search (by title, author)	     searchInputValue	                    /search/{query}
+PriceRange	   Filter (by price)                      	-	                               -
+BookItem	     Book Items (title, subtitle,
+                   image, price)	                      -	                               -
+Loader		                                              -	                               -
+ErrorMessage		                                        -	                               -
+
+## Book Details
+Component	              Details	                              State	                API (IT Bookstore)
+BookDetails	   Book detailed Information - image,
+               title, subtitle, price, description,
+               etc., “Add to cart” Button, “Back” 
+               button	                               apiStatus, bookDetailsData	       /books/{isbn}
+Header	      links for pages Home, Book List, Cart	     -	                                 -
+Loader		                                               -                                 	-
+ErrorMessage	
+
+### Cart
+Components	            Details	                          State	                    API (IT Bookstore)
+Cart	           Cart Items, “Remove” Button,
+                  Order Summary, “Checkout” Button	    (Context Consumer)	                  -
+Header	         links for pages Home, Book List, Cart	     -	                            -
+CartItem	       Book Detailed Info (image, title,
+                 subtitle, price, description)	        (Context Consumer)                 	-
+
+
+#### CheckOut
+Components	             Details	                        State	                     API (IT Bookstore)
+Checkout	           “Back” button	                 (Context Consumer)	                     -
+UserDetailsForm	     Order Form - Personal Details
+                     - First Name, Last Name, Email, 
+                     Mobile No. , Place Order Button,
+                     Order Summary	userDetails,        isFormSubmitted                      	-
+
+##### NotFound
+Components	           Details	                       State	                 API (IT Bookstore)
+NotFound	                -	                            -                             -
+Header	        links for pages Home,
+                Book List Cart	                       Header	        links for pages Home, Book List, Cart
+
+###### App
+Component	            Details	                       State	                  API (IT Bookstore)
+App	                    -	                cartList (Context Provider), 
+                                          Context: cartList, addToCart, 
+                                          deleteFromCart	                            -
+
+
+
+#### Must Have
+  * Build a ReactJS application with multiple pages/components, including Home, Book Listing, Book Details, Shopping Cart, and Checkout pages.
+  * Implement features such as book search, book filtering, adding to cart, removing from cart, and order placement.
+
+#### Nice to Have
+ Bonus tasks include implementing user authentication, unit tests, and deploying the application on a hosting platform.
+
+### Guidelines to develop a project
+
+#### Must Have
+ * Utilize GitHub
+  1.Commit code regularly and commit messages should be clear
+  2.Include a README file explaining the project setup, usage instructions, and any additional information
+  3.The repo should be well organized and easy to understand.
+  4.The code should be clean, modular, and well-structured
+* The application should be visually appealing.
+* The application should handle all the errors.
+#### Nice to Have
+  Implement unit tests
+
+### Submission Instructions
+
+#### Must Have
+ Github Repository
+
+#### Nice to Have
+  Deploy the Application in github
+
+## Resources
+
+### Design files
+ Home, Book Lists, Book Details, Shopping Cart, Checkout
+ Reference:(https://www.crossword.in/)
+
+### APIs
+ Books, Book Details, Search, Filter
+ Reference:https://api.itbook.store/1.0/new
+
+### Third-party packages
+ Icons: react-icons
+ Loader: react-loader-spinner
+ Range Slider: rc-slider
+ React Router: react-router-dom
